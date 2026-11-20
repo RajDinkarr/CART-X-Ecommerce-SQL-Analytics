@@ -186,7 +186,6 @@ Payment analysis compares payment types, installment counts, payment values, and
 - Analytical table design and grain definition
 - Reconciliation and validation queries
 
-## Project folder structure
 
 ## Project folder structure
 
