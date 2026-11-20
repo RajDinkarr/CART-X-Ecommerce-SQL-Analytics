@@ -188,8 +188,11 @@ Payment analysis compares payment types, installment counts, payment values, and
 
 ## Project folder structure
 
+## Project folder structure
+
 ```text
 CART-X/
+├── README.md
 ├── FINAL_PROJECT/
 │   ├── 01_Database_Setup.sql
 │   ├── 02_Staging_Tables.sql
@@ -197,16 +200,24 @@ CART-X/
 │   ├── 04_Core_Transformations.sql
 │   ├── 05_Mart_Creation.sql
 │   ├── 06_Business_Analysis.sql
-│   ├── 07_Final_Validation.sql
-│   └── README.md
+│   └── 07_Final_Validation.sql
+├── PROJECT_SCREENSHOTS/
+│   ├── 01_Database_Tables_Top.png
+│   ├── 02_Database_Tables_Bottom.png
+│   ├── 03_Monthly_Sales_Performance.png
+│   ├── 04_Customer_Performance.png
+│   ├── 05_Product_Category_Performance.png
+│   ├── 06_Seller_Performance.png
+│   ├── 07_Delivery_Performance.png
+│   └── 08_Payment_Performance.png
 └── DEVELOPMENT_HISTORY/
-    ├── cartx1.sql
-    ├── cartx2.sql
-    ├── ...
-    └── cartx9.sql
+    ├── DEVELOPMENT_LOG.md
+    ├── TROUBLESHOOTING.md
+    └── SQL_EXPERIMENTS/
 ```
 
-`DEVELOPMENT_HISTORY` contains the original exploratory SQL files. They are retained as a development record and are not the recommended execution sequence.
+`FINAL_PROJECT` contains the organized SQL scripts. `PROJECT_SCREENSHOTS` contains screenshots of the database structure and analytical outputs. `DEVELOPMENT_HISTORY` is intended to document the original development process, experiments, and troubleshooting separately from the final scripts.
+
 
 ## Execution order
 
