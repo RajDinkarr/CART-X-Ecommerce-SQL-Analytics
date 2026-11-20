@@ -71,7 +71,7 @@ The CORE layer contains nine active tables:
 
 A separate `core_geolocation_backup` table preserves the original 1,000,163 geolocation rows before exact deduplication.
 
-Key modeling decisions:
+**Key modeling decisions:**
 
 - Primary keys are applied to the active CORE tables.
 - Foreign keys connect orders to customers, order items to orders/products/sellers, and payments/reviews to orders.
@@ -186,37 +186,67 @@ Payment analysis compares payment types, installment counts, payment values, and
 - Analytical table design and grain definition
 - Reconciliation and validation queries
 
-
 ## Project folder structure
 
 ```text
-CART-X/
+CART-X-Ecommerce-SQL-Analytics/
+│
 ├── README.md
-├── FINAL_PROJECT/
-│   ├── 01_Database_Setup.sql
-│   ├── 02_Staging_Tables.sql
-│   ├── 03_Data_Import.sql
-│   ├── 04_Core_Transformations.sql
-│   ├── 05_Mart_Creation.sql
-│   ├── 06_Business_Analysis.sql
-│   └── 07_Final_Validation.sql
-├── PROJECT_SCREENSHOTS/
-│   ├── 01_Database_Tables_Top.png
-│   ├── 02_Database_Tables_Bottom.png
-│   ├── 03_Monthly_Sales_Performance.png
-│   ├── 04_Customer_Performance.png
-│   ├── 05_Product_Category_Performance.png
-│   ├── 06_Seller_Performance.png
-│   ├── 07_Delivery_Performance.png
-│   └── 08_Payment_Performance.png
-└── DEVELOPMENT_HISTORY/
-    ├── DEVELOPMENT_LOG.md
-    ├── TROUBLESHOOTING.md
-    └── SQL_EXPERIMENTS/
+│
+├── 01_Database_Setup.sql
+├── 02_Staging_Tables.sql
+├── 03_Data_Import.sql
+├── 04_Core_Transformations.sql
+├── 05_Mart_Creation.sql
+├── 06_Business_Analysis.sql
+├── 07_Final_Validation.sql
+│
+└── PROJECT_SCREENSHOTS/
+    ├── 01_Database_Tables_Top.png
+    ├── 02_Database_Tables_Bottom.png
+    ├── 03_Monthly_Sales_Performance.png
+    ├── 04_Customer_Performance.png
+    ├── 05_Product_Category_Performance.png
+    ├── 06_Seller_Performance.png
+    ├── 07_Delivery_Performance.png
+    └── 08_Payment_Performance.png
 ```
 
-`FINAL_PROJECT` contains the organized SQL scripts. `PROJECT_SCREENSHOTS` contains screenshots of the database structure and analytical outputs. `DEVELOPMENT_HISTORY` is intended to document the original development process, experiments, and troubleshooting separately from the final scripts.
+The repository contains the finalized SQL scripts in its root directory and the project screenshots in the `PROJECT_SCREENSHOTS` folder. The original exploratory SQL files are not included in this repository.
 
+## Project screenshots
+
+### Database structure
+
+![Database Tables - Top](PROJECT_SCREENSHOTS/01_Database_Tables_Top.png)
+
+![Database Tables - Bottom](PROJECT_SCREENSHOTS/02_Database_Tables_Bottom.png)
+
+### Business analysis results
+
+**Monthly Sales Performance**
+
+![Monthly Sales Performance](PROJECT_SCREENSHOTS/03_Monthly_Sales_Performance.png)
+
+**Customer Performance**
+
+![Customer Performance](PROJECT_SCREENSHOTS/04_Customer_Performance.png)
+
+**Product Category Performance**
+
+![Product Category Performance](PROJECT_SCREENSHOTS/05_Product_Category_Performance.png)
+
+**Seller Performance**
+
+![Seller Performance](PROJECT_SCREENSHOTS/06_Seller_Performance.png)
+
+**Delivery Performance**
+
+![Delivery Performance](PROJECT_SCREENSHOTS/07_Delivery_Performance.png)
+
+**Payment Performance**
+
+![Payment Performance](PROJECT_SCREENSHOTS/08_Payment_Performance.png)
 
 ## Execution order
 
@@ -236,14 +266,14 @@ Before running `03_Data_Import.sql`, replace the placeholder CSV paths with the 
 
 ## Project status
 
-- Staging import and validation: completed
+- Staging import and validation on the project database: completed
 - CORE transformations and relational structure: completed
 - MART table creation and reconciliation: completed
-- Business analysis queries: prepared
-- Final validation queries: prepared
-- Repository documentation: this README
+- Business analysis on the populated project database: completed
+- Final validation on the populated project database: completed
+- Repository documentation: completed
 
-The clean scripts were organized from the development work. Unless separately executed and checked in a fresh test database, their presence should not be taken as proof that a full rebuild has been independently tested.
+The clean scripts were organized from the development work. Their presence should not be taken as proof that a full rebuild has been independently tested in a separate fresh database.
 
 ## Author
 
